@@ -1,0 +1,604 @@
+<!doctype html>
+
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MebelBozor - Uyingiz uchun eng yaxshi mebellar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#ec9213',
+              'background-light': '#f8f7f6',
+              'background-dark': '#221a10',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <!-- Navigation Bar -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16 sm:h-20">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >chair_alt</span
+              >
+              <h1
+                class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white"
+              >
+                Mebel<span class="text-primary">Bozor</span>
+              </h1>
+            </div>
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden md:flex flex-1 max-w-md mx-8">
+              <div class="relative w-full">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <span class="material-symbols-outlined text-slate-400"
+                    >search</span
+                  >
+                </div>
+                <input
+                  class="block w-full pl-10 pr-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg leading-5 bg-slate-50 dark:bg-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm"
+                  placeholder="Mebel qidirish..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- Navigation Links & Action -->
+            <div class="flex items-center gap-4 sm:gap-6">
+              <nav class="hidden lg:flex items-center gap-6">
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >Mehmonxona</a
+                >
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >Yotoqxona</a
+                >
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >Ofis</a
+                >
+                <a
+                  class="text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >Oshxona</a
+                >
+              </nav>
+              <button
+                class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all shadow-sm flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >add_circle</span
+                >
+                <span class="hidden sm:inline">Mebel sotish</span>
+              </button>
+              <div
+                class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden border-2 border-primary/20"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  data-alt="User profile avatar portrait"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzk2GrIkFFbDtU0RYOwyS0ggx4SqNNsfYyOO2eotkBNm5TF3TfDtA0nq_TJ2Ef9Hoq1e4aAum2CyQYbZ9fdsBL7F5dMd9LlSyLCoAw4EeLJcRQGx_1t4YjPhQ4612lasvIqFg3C0ojovv_KAUessu0RJBT54nXYL7Nu9t5SSUfyZ9Wds0wMYc6JcXbqJV8Hz1iLG0k0BKHiMyLqiUSZ0ZeYKBi_14ZYK6DlX8FInN7zIFhGYvYduxzCX3_3GF4Y-1cP3vNj9cFxPIi"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative px-4 py-6 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div
+            class="relative overflow-hidden rounded-xl h-[400px] sm:h-[500px]"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"
+            ></div>
+            <img
+              class="absolute inset-0 w-full h-full object-cover"
+              data-alt="Modern green velvet sofa in bright living room"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqLDZjA2HPVQ__KKkEXm1ADIF-5Dz747vbnfS2ffmn7IuziBT5OZYv1IvUl7Xl5_M1JiTodc_XqksvaWYy1-4CP6xnYXcYHbgprUrx1TuFraHNck1kNCX2DNlVoNYZpCsSrKhqXP6rUNDiicHsV7SWX9bMb3-SmRmkv6o8b71DhwdPQSDEctWqwQdiGxFM5k9-OeElaDFXS723TakIc5BhT2uA6cXqPkQjIFV4w5O15Ed0aX2ChdlAIzjIgyO3XEJVC41QBc59eKAC"
+            />
+            <div
+              class="relative z-20 flex flex-col justify-center h-full max-w-2xl px-8 sm:px-12"
+            >
+              <h2
+                class="text-3xl sm:text-5xl font-black text-white leading-tight mb-4"
+              >
+                Uyingiz uchun eng yaxshi mebellarni toping
+              </h2>
+              <p class="text-lg text-slate-200 mb-8 font-medium">
+                Sifatli va hamyonbop mebellarni to'g'ridan-to'g'ri
+                sotuvchilardan xarid qiling.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all"
+                >
+                  Barchasini ko'rish
+                </button>
+                <button
+                  class="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/30 px-8 py-3 rounded-lg font-bold text-lg transition-all"
+                >
+                  Katalog
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Featured Categories -->
+        <section class="px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <h3 class="text-2xl font-bold mb-8 flex items-center gap-2">
+            <span class="w-2 h-8 bg-primary rounded-full"></span>
+            Kategoriyalar
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Living Room -->
+            <div
+              class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-md text-center"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >chair</span
+                >
+              </div>
+              <h4 class="font-bold text-lg mb-1">Mehmonxona</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Divan va kreslolar
+              </p>
+            </div>
+            <!-- Bedroom -->
+            <div
+              class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-md text-center"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >bed</span
+                >
+              </div>
+              <h4 class="font-bold text-lg mb-1">Yotoqxona</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Krovat va shkaflar
+              </p>
+            </div>
+            <!-- Office -->
+            <div
+              class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-md text-center"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >desk</span
+                >
+              </div>
+              <h4 class="font-bold text-lg mb-1">Ofis</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Stol va stullar
+              </p>
+            </div>
+            <!-- Kitchen -->
+            <div
+              class="group cursor-pointer bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary transition-all shadow-sm hover:shadow-md text-center"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"
+              >
+                <span class="material-symbols-outlined text-primary text-3xl"
+                  >kitchen</span
+                >
+              </div>
+              <h4 class="font-bold text-lg mb-1">Oshxona</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Oshxona garniturlari
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Latest Ads Grid -->
+        <section class="px-4 py-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div class="flex justify-between items-center mb-8">
+            <h3 class="text-2xl font-bold flex items-center gap-2">
+              <span class="w-2 h-8 bg-primary rounded-full"></span>
+              Yangi e'lonlar
+            </h3>
+            <a class="text-primary font-bold hover:underline" href="#"
+              >Barchasi →</a
+            >
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  data-alt="Modern minimalist wooden dining chair"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUhs83ZfbtBSXhoVBqKEj03ZFhAmvh65I7Q0yemB99cmbfKeQkplT5qwAIiyiDvonMA1JjWg5CD464fe9iX8byt2aNGwfEErwTei0WYE2Zw38zBaMrUDufbT4-3uYlLMGFUGxipAwc2DQ8uwva3Z3QVXJt7tMgg-hDKbt7EX75tZDe7qAjp4_aMFPRKdWace4xSnNpEpV6h3v0PmQ4STSvIFB81NvyrKBDJ4fQAbHD2d4xn6qB8Hs_NUVrjdC82caFUDWTX0yOPa_"
+                />
+                <div class="absolute top-2 right-2">
+                  <button
+                    class="bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-slate-900 hover:text-red-500 transition-colors"
+                  >
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs font-bold text-primary uppercase mb-1">
+                  Yangi
+                </p>
+                <h4 class="font-bold text-lg mb-2 line-clamp-1">
+                  Minimalist yog'och stul
+                </h4>
+                <div
+                  class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >location_on</span
+                  >
+                  Toshkent
+                </div>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-xl font-extrabold text-slate-900 dark:text-white"
+                    >450 000 so'm</span
+                  >
+                  <button
+                    class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                  >
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  data-alt="Comfortable gray fabric sofa for living room"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_e7cqorQRakXZqhUI4ksJQ7lVN8NUuMuBXtgkT6Tt1xiw3cBWwBqL6Vr9GheMceUW4_0dB4i6WcxcFr9vLVy1rgo5gr4714UgERUJFBI3WV-8Z8bn-nstOpf0ro9FnMSW2yqZ3DJSiiTR2Pj02sTejkH3024Xf0KkhG1OeDhNPLnAnYUHeRrJclK1fL0S5RH29TZmfVKeQLzWqomsNxfGrnyhRyEXSq7_1tTByP0wVHZN_yHACkWVsyeVo1O6gR7tCQqLDUXt5V0k"
+                />
+                <div class="absolute top-2 left-2">
+                  <span
+                    class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase"
+                    >Premium</span
+                  >
+                </div>
+                <div class="absolute top-2 right-2">
+                  <button
+                    class="bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-slate-900 hover:text-red-500 transition-colors"
+                  >
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs font-bold text-primary uppercase mb-1">
+                  Sifatli
+                </p>
+                <h4 class="font-bold text-lg mb-2 line-clamp-1">
+                  Yumshoq divan (Kulrang)
+                </h4>
+                <div
+                  class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >location_on</span
+                  >
+                  Samarqand
+                </div>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-xl font-extrabold text-slate-900 dark:text-white"
+                    >3 200 000 so'm</span
+                  >
+                  <button
+                    class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                  >
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  data-alt="Modern office desk with computer setup"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsptUAiZhh74xd3UOJqiG1gnLp0Iy-fdvV3ilMn9vMAfOC3gdkpm6Uch6s7RrLekPL6jTw59wcKnS3eaf0MbeypYSGwtPfmjSk2KBGC8cWdN33BAdibCEESlrhMZEs3eEHKf29LiCWh_4WjkZyfYuCobRPX21qNSSqdSAlV3M8xrjEPC16juPmyAIOzQp2fcBCtgYLIaX0MJei7youYDtHjpsW6eBqKVPpQkd4E5LeMHkkjNmEUGML7LqBsMNX4f6d48swutUsgJo7"
+                />
+                <div class="absolute top-2 right-2">
+                  <button
+                    class="bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-slate-900 hover:text-red-500 transition-colors"
+                  >
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs font-bold text-primary uppercase mb-1">
+                  Ofis uchun
+                </p>
+                <h4 class="font-bold text-lg mb-2 line-clamp-1">
+                  Zamonaviy ish stoli
+                </h4>
+                <div
+                  class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >location_on</span
+                  >
+                  Farg'ona
+                </div>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-xl font-extrabold text-slate-900 dark:text-white"
+                    >4 000 000 so'm</span
+                  >
+                  <button
+                    class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                  >
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  data-alt="Double bed with white sheets and pillows"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB623kfUp64cW3NtvbN993UnA-UBZtXERJOEdS1wrEwjFpFcUjhONiQN4T2bNEo60jkEUxGGE-v854VimbSEdVq4KRhGydPSQoVy5Qtk1Lpk19oKeQK67Al_XBOJbFVSNnbJVBi9hHyYbr_RGyFkWO3ZII3X_2rk79DrqFFX6gNJajwG9rL1YU7fg-HwclvCzRFsZCtD1inJiNtJCfCf8p170tdAlHYwwlTJVz_EBiT1I_ddMOc6cCXK70en6E6ohnZSM67PWaXso8H"
+                />
+                <div class="absolute top-2 right-2">
+                  <button
+                    class="bg-white/80 backdrop-blur-sm p-1.5 rounded-full text-slate-900 hover:text-red-500 transition-colors"
+                  >
+                    <span class="material-symbols-outlined">favorite</span>
+                  </button>
+                </div>
+              </div>
+              <div class="p-4">
+                <p class="text-xs font-bold text-primary uppercase mb-1">
+                  Sotuvda bor
+                </p>
+                <h4 class="font-bold text-lg mb-2 line-clamp-1">
+                  Ikki kishilik krovat
+                </h4>
+                <div
+                  class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-sm mb-3"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >location_on</span
+                  >
+                  Buxoro
+                </div>
+                <div class="flex justify-between items-center">
+                  <span
+                    class="text-xl font-extrabold text-slate-900 dark:text-white"
+                    >4 100 000 so'm</span
+                  >
+                  <button
+                    class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                  >
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer
+        class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="col-span-1 md:col-span-1">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >chair_alt</span
+                >
+                <h1 class="text-xl font-extrabold tracking-tight">
+                  Mebel<span class="text-primary">Bozor</span>
+                </h1>
+              </div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                O'zbekistondagi eng yirik mebel marketplace platformasi. Biz
+                bilan uyingizni go'zal qiling.
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-slate-900 dark:text-white mb-4">
+                Kompaniya
+              </h5>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >Biz haqimizda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >Vakansiyalar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >Yangiliklar</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="font-bold text-slate-900 dark:text-white mb-4">
+                Yordam
+              </h5>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >Qo'llab-quvvatlash</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary"
+                    href="#"
+                    >Yetkazib berish</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5 class="font-bold text-slate-900 dark:text-white mb-4">
+                Aloqa
+              </h5>
+              <ul class="space-y-2">
+                <li
+                  class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400"
+                >
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                  info@mebelbozor.uz
+                </li>
+                <li
+                  class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400"
+                >
+                  <span class="material-symbols-outlined text-sm">call</span>
+                  +998 71 200 00 00
+                </li>
+                <li class="flex items-center gap-4 mt-4">
+                  <a
+                    class="text-slate-400 hover:text-primary transition-colors"
+                    href="#"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="text-slate-400 hover:text-primary transition-colors"
+                    href="#"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="currentColor"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              © 2024 MebelBozor. Barcha huquqlar himoyalangan.
+            </p>
+            <div class="flex gap-6">
+              <a class="text-xs text-slate-500 hover:text-primary" href="#"
+                >Maxfiylik siyosati</a
+              >
+              <a class="text-xs text-slate-500 hover:text-primary" href="#"
+                >Foydalanish shartlari</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
